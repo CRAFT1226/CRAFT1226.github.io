@@ -2,10 +2,6 @@
   position: relative;
   font-weight: 200;
 }
-* p {
-  letter-spacing: 10px;
-  
-}
 
 html, body {
   padding: 0px;
@@ -20,6 +16,7 @@ html, body {
   margin-top: -1px;
   font-size: 15px;
   margin-left: 10px;
+  letter-spacing: 10px;
 }
 
 .title_hr {
