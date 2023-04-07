@@ -1,6 +1,10 @@
 * {
   position: relative;
-  letter-spacing: 3px;
+  font-weight: 200;
+}
+* p {
+  letter-spacing: 6px;
+  
 }
 
 html, body {
