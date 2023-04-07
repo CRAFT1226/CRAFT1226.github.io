@@ -1,0 +1,139 @@
+* {
+  position: relative;
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+* h4 {
+  margin-bottom: 0px;
+}
+
+* h5 {
+  margin-top: -1px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.title_hr {
+  border: solid 3px #8CC22F;
+  width: 200px;
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.max_width {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  font-family: "Noto Serif TC";
+  padding: 40px;
+  background-color: #E1EECC;
+}
+.content .name, .content .english, .content .who, .content .web {
+  margin-top: -12px;
+  margin-bottom: -12px;
+  text-align: center;
+}
+.content .name {
+  font-size: 50px;
+  margin-left: 215px;
+  display: inline-block;
+}
+.content .english_name {
+  display: inline-block;
+}
+.content .who {
+  font-size: 20px;
+}
+.content .web {
+  font-size: 15px;
+}
+.content .title {
+  box-shadow: 0px 0px 5px;
+  border-radius: 6px;
+}
+.content .family {
+  box-shadow: 0px 0px 2px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.content .experience {
+  box-shadow: 0px 0px 2px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.content .interest {
+  box-shadow: 0px 0px 2px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.content .personality {
+  box-shadow: 0px 0px 2px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.content .achieve {
+  box-shadow: 0px 0px 2px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.circle {
+  border-radius: 100%;
+  position: absolute;
+}
+
+.circle1 {
+  width: 50px;
+  height: 50px;
+  left: 37px;
+  top: 1px;
+  background-color: #FCAA67;
+}
+
+.circle2 {
+  width: 40px;
+  height: 40px;
+  left: 25px;
+  top: -10px;
+  background-color: #7D7C7A;
+}
+
+.circle3 {
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 12px;
+  background-color: #9FC2CC;
+}
+
+.circle4 {
+  width: 20px;
+  height: 20px;
+  left: 93px;
+  top: 20px;
+  background-color: #C6DA74;
+}
+
+.circle_out {
+  width: 60px;
+  height: 60px;
+  right: -30px;
+  bottom: -30px;
+  background-color: #8CC22F;
+}
+
+.background_circle {
+  width: 800px;
+  height: 700px;
+  background-color: #D3F3C7;
+  right: 100px;
+  top: 70px;
+}
