@@ -1,5 +1,6 @@
 * {
   position: relative;
+  letter-spacing: 3px;
 }
 
 html, body {
@@ -26,7 +27,7 @@ html, body {
 }
 
 .max_width {
-  max-width: 900px;
+  max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
 }
