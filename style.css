@@ -8,15 +8,20 @@ html, body {
   margin: 0px;
 }
 
+* h3{
+  font-size: 25px;
+}
+
 * h4 {
   margin-bottom: 0px;
+  font-size: 22px;
 }
 
 * h5 {
   margin-top: -1px;
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 10px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .title_hr {
@@ -28,7 +33,7 @@ html, body {
 }
 
 .max_width {
-  max-width: 600px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
 }
