@@ -1,5 +1,3 @@
-import $ from "https://cdn.skypack.dev/jquery@3.6.4";
-
 class StickyNavigation {
 	
 	constructor() {
