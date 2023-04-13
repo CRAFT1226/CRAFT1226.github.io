@@ -5,17 +5,17 @@ class StickyNavigation {
 		this.currentTab = null;
 		this.tabContainerHeight = 70;
 		let self = this;
-		document.querySelector('.et-hero-tab').click(function() { 
-			self.onTabClick(event, document.querySelector(this)); 
+		$('.et-hero-tab').click(function() { 
+			self.onTabClick(event, $(this)); 
 		});
-		document.querySelector(window).scroll(() => { this.onScroll(); });
-		document.querySelector(window).resize(() => { this.onResize(); });
+		$(window).scroll(() => { this.onScroll(); });
+		$(window).resize(() => { this.onResize(); });
 	}
 	
 	onTabClick(event, element) {
 		event.preventDefault();
-		let scrollTop = document.querySelector(element.attr('href')).offset().top - this.tabContainerHeight + 1;
-		document.querySelector('html, body').animate({ scrollTop: scrollTop }, 600);
+		let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+		$('html, body').animate({ scrollTop: scrollTop }, 600);
 	}
 	
 	onScroll() {
@@ -30,12 +30,12 @@ class StickyNavigation {
 	}
 	
 	checkTabContainerPosition() {
-		let offset = document.querySelector('.et-hero-tabs').offset().top + document.querySelector('.et-hero-tabs').height() - this.tabContainerHeight;
-		if(document.querySelector(window).scrollTop > offset) {
-			document.querySelector('.et-hero-tabs-container').classList.add('et-hero-tabs-container--top');
+		let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+		if($(window).scrollTop() > offset) {
+			$('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
 		} 
 		else {
-			document.querySelector('.et-hero-tabs-container').classList.remove('et-hero-tabs-container--top');
+			$('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
 		}
 	}
 	
@@ -43,13 +43,13 @@ class StickyNavigation {
 		let newCurrentId;
 		let newCurrentTab;
 		let self = this;
-		document.querySelector('.et-hero-tab').each(function() {
-			let id = document.querySelector(this).attr('href');
-			let offsetTop = document.querySelector(id).offset().top - self.tabContainerHeight;
-			let offsetBottom = document.querySelector(id).offset().top + document.querySelector(id).height() - self.tabContainerHeight;
-			if(document.querySelector(window).scrollTop > offsetTop && document.querySelector(window).scrollTop < offsetBottom) {
+		$('.et-hero-tab').each(function() {
+			let id = $(this).attr('href');
+			let offsetTop = $(id).offset().top - self.tabContainerHeight;
+			let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+			if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
 				newCurrentId = id;
-				newCurrentTab = document.querySelector(this);
+				newCurrentTab = $(this);
 			}
 		});
 		if(this.currentId != newCurrentId || this.currentId === null) {
@@ -66,28 +66,28 @@ class StickyNavigation {
 			width = this.currentTab.css('width');
 			left = this.currentTab.offset().left;
 		}
-		document.querySelector('.et-hero-tab-slider').css('width', width);
-		document.querySelector('.et-hero-tab-slider').css('left', left);
+		$('.et-hero-tab-slider').css('width', width);
+		$('.et-hero-tab-slider').css('left', left);
 	}
 	
 }
 
 new StickyNavigation();
 
-document.querySelector(document).ready(
+$(document).ready(
   function(){
     setInterval(moveBalls, 50);
   }
 );
 
 function moveBalls() {
-  document.querySelector('.circle').each(
+  $('.circle').each(
     function(){
       var min = 0;
       var max = 1000;
       var x = Math.floor(Math.random() * (max - min + 1)) + min;
       var y = Math.floor(Math.random() * (max - min + 1)) + min;
-      document.querySelector(this).animate({
+      $(this).animate({
         left: x,
         top: y
       }, 15000);
